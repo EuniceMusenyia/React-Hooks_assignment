@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+// import Login from './Login';
+// import Navbar from './Nav_bar';
+
+// // import Products from './Product'
+// import Product_details from './Product_details';
+
+
+// // import Product_details from './product_details';
+// // import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+// function App() {
+//   return (
+//     <div >
+//       <Navbar/>
+// <BrowserRouter>
+// <Routes>
+//   <Route path='/Login' element ={<Login/>}></Route>
+//   <Route path='Product_details' element={<Product_details/>}/>
+//   {/* <Route path='/product/:productId' element ={<Product_details/>}/> */}
+//   {/* <Route path='/products' element ={<Products/>}/>
+//   <Route path='*' element={<Navigate to='/'/>}/> */}
+// </Routes>
+// </BrowserRouter>
+//     </div>
+//   );
+// }
+// export default App;     
+
+
+// import logo from './logo.svg';
+import  './App.css';
+import Products from './Product';
+import Login from './Login';
+// import Navigation  './Nav_bar';
+// import Products from './Product';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Products/>
+     <Login/>
+     {/* <Navigation/> */}
+     <Products/>
+
     </div>
   );
 }
