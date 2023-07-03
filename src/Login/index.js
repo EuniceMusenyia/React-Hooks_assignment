@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {  useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './style.css'
 
 const Login = ()=> {
@@ -25,14 +25,14 @@ const Login = ()=> {
     
                 },
                 body: JSON.stringify(data)
-            })
+            });
             const result = await response.json();
             console.log(result);
 
             if (result.success){
                 setSuccessful_Login(true);
                 setTimeout(() => {
-                    navigate('/productspage');
+                    navigate('/product');
                 }, 1000);
             }
         }
@@ -47,6 +47,23 @@ const Login = ()=> {
         <div>
             <h1> Login </h1>
             {successful_login && <h3>Successfully logged in</h3>}
+           <form className="form" onSubmit={handleSubmit}>
+
+            <input 
+            type="text" id="username" value={username}
+            onChange={(e) => setUsername (e.target.value)} 
+            required placeholder = "User Name" />  <br/> <br/>
+
+            <input 
+             type="password" id="password" value={username}
+             onChange={(e) => setPassword(e.target.value)} 
+             required placeholder = "Password" />  <br/> <br/>
+
+        <button className="loginbtn" type="submit">
+          <Link to="/product">Login</Link>
+        </button>
+      </form>
+
         </div>
  
     )

@@ -1,10 +1,11 @@
+
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import Products from './Product';
 import Login from './Login';
-// import { Link } from 'react-router-dom';
-
-// import React from 'react';
+import Details from './Product_Details';
+import AddProduct from './AddProduct'
 import  './App.css';
 
 
@@ -21,12 +22,17 @@ const App = () =>{
         <ul >
           <li> <Link to = "/Product" > Products</Link> </li>
         </ul>
+
+        <ul >
+          <li> <Link to = "/Product-Details" > Product Details</Link> </li>
+        </ul>
       </nav>
     </div>
 
     <Routes>
-      <Route path = "/loginpage" element = {<Login/>} />
-      <Route path = "/productspage" element = {<Products/>} />
+      <Route path = "/Login" element = {<Login/>} />
+      <Route path = "/Product" element = {<Products/>} />
+      <Route path='/Product-Details' element = {< Details/>}/>
       <Route path="*" element={<Navigate to="/products" />} />
 
     </Routes>
