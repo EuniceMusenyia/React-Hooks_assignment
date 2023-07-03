@@ -2,7 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import Products from './Product';
 import Login from './Login';
-import React from 'react';
+// import { Link } from 'react-router-dom';
+
+// import React from 'react';
 import  './App.css';
 
 
