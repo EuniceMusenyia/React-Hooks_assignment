@@ -1,48 +1,35 @@
-// import Login from './Login';
-// import Navbar from './Nav_bar';
-
-// // import Products from './Product'
-// import Product_details from './Product_details';
-
-
-// // import Product_details from './product_details';
-// // import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-// function App() {
-//   return (
-//     <div >
-//       <Navbar/>
-// <BrowserRouter>
-// <Routes>
-//   <Route path='/Login' element ={<Login/>}></Route>
-//   <Route path='Product_details' element={<Product_details/>}/>
-//   {/* <Route path='/product/:productId' element ={<Product_details/>}/> */}
-//   {/* <Route path='/products' element ={<Products/>}/>
-//   <Route path='*' element={<Navigate to='/'/>}/> */}
-// </Routes>
-// </BrowserRouter>
-//     </div>
-//   );
-// }
-// export default App;     
-
-
-// import logo from './logo.svg';
-import  './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import Products from './Product';
 import Login from './Login';
-// import Navigation  './Nav_bar';
-// import Products from './Product';
+import React from 'react';
+import  './App.css';
 
-function App() {
+
+const App = () =>{
   return (
-    <div className="App">
-     <Products/>
-     <Login/>
-     {/* <Navigation/> */}
-     <Products/>
+   <Router>
 
+    <div className= 'navbar'>
+      <nav className='nav'>
+        <ul >
+          <li> <Link to = "/Login" > Login</Link> </li>
+        </ul>
+
+        <ul >
+          <li> <Link to = "/Product" > Products</Link> </li>
+        </ul>
+      </nav>
     </div>
+
+    <Routes>
+      <Route path = "/loginpage" element = {<Login/>} />
+      <Route path = "/productspage" element = {<Products/>} />
+      <Route path="*" element={<Navigate to="/products" />} />
+
+    </Routes>
+   </Router>
   );
-}
+};
 
 export default App;

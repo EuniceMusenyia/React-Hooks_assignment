@@ -1,38 +1,47 @@
 import React, {useState,useEffect} from "react";
 const Products = () =>{
     const [products, setProducts] = useState([]);
-    const [loading,setLoading] = useState(false)
-    useEffect(()=>{
-        (async ()=>{
-            await getProducts();
-        })();
-        getProducts();
-    },[])
-    const getProducts = async()=>{
-        try{
-            setLoading(true)
-            const response = await fetch ('https://dummyjson.com/products')
-        const result =await response.json();
-        setProducts(result.products);
-        setLoading(false)
-        }
-        catch(error){
-            console.log(error.message);
-        }
+
+    useEffect (() =>{
+        const getproduct = async () => {
+            try{
+                const response = await fetch ('https://dummyjson.com/products?limit=6');
+                const data = await response.json();
+                setProducts(data.products);
+            }
+            catch (error){
+                console.error(error);
+            }
+        };
+
+        getproduct();
+        
+    },[]);
+
+    const AddProduct = (product)=> {
+        console.log('New product:', product);
     };
-    console.log({products});
-    if(loading){
-        return <h1>Loading...</h1>
-    }
+
     return(
-        <div>
-            {products.map(item =>(
-                <div key={item.id}>
-                    <h3>{item.title}</h3>
+        <div id="products">
+            <Link to = "/newproduct" className = "productbtn" > New Product</Link>
+            <div className="newproducts">
+                {products.map((item) =>(
+                    <Link to={`/product/${item.id}`} key={item.id} className="product-link">
+                    <div className="main">
+                      <img src={item.thumbnail} alt={item.title} />
+                      <h2>{item.title}</h2>
+                      <p>{item.price}</p>
+                      <p>{item.discountPercentage}</p>
                     </div>
-            ))}
-        </div>);
+                  </Link>
+                ))}
+            </div>
+        </div>
+    );
+
 }
+
 export default Products
 
 
