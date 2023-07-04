@@ -1,3 +1,32 @@
+.navbar {
+  background-color: #aaa5a5;
+  padding: 20px;
+  font-size: larger;
+  color: blue;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: blue;
+}
+
 .App {
   text-align: center;
 }
@@ -27,6 +56,11 @@
 .App-link {
   color: #61dafb;
 }
+/* .App-navbar-nav{
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
+  color: yellow;
+} */
 
 @keyframes App-logo-spin {
   from {

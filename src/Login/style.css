@@ -17,3 +17,17 @@
     border-radius: 5px;
     color: #ffffff;
 }
+.form > h1{
+    text-align: center;
+    margin-right: 50%;
+}
+#login{
+    /* text-align: center; */
+    margin-left: 42%;
+}
+.log{
+    margin-top: 5%;
+    margin-left: 10%;
+    /* border: solid; */
+    /* background-color: aqua; */
+}

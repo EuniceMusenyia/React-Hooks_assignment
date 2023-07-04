@@ -44,8 +44,8 @@ const Login = ()=> {
     };
 
     return(
-        <div>
-            <h1> Login </h1>
+        <div className="log">
+            <h1 id="login"> Login </h1>
             {successful_login && <h3>Successfully logged in</h3>}
            <form className="form" onSubmit={handleSubmit}>
 

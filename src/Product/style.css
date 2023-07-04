@@ -1,8 +1,5 @@
 
 .products{
-    /* border: solid grey 2px; */
-    
-    /* margin-bottom: 3%; */
     border-radius: 5px;
     text-align: center;
   }
@@ -12,14 +9,10 @@
     border:solid black 1px ;
   }
   .products button{
-    /* background-color: yellow; */
     font-size: 24px;
   }
    .productbtn{
-    /* Existing styles */
-    /* background-color: yellow; */
-    font-size: 24px;
-    /* Additional styles */
+      font-size: 24px;
     color: black;
     border: 1px solid black;
     padding: 10px 20px;
@@ -61,6 +54,7 @@
 .details{
     width: 300px;
     height: 400px;
+    margin-bottom: 30%;
 }
 .img{
     width: 100%;
