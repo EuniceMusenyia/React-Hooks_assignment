@@ -22,16 +22,16 @@ const Products = () =>{
         
     },[]);
 
-    const AddProduct = (product)=> {
-        console.log('New product:', product);
-    };
+    // const AddProduct = (product)=> {
+    //     console.log('New product:', product);
+    // };
 
     return(
         <div id="products">
             {/* <Link to = "/newproduct" className = "productbtn" > New Product</Link> */}
             <div className="newproducts">
                 {products.map((item) =>(
-                    <Link to={`/product/${item.id}`} key={item.id} className="product-link">
+                    <Link to={`/Product-Details/${item.id}`} key={item.id} className="product-link">
                     <div className="details">
                       <img src={item.thumbnail} alt={item.title} className="img"/>
                       <h2>{item.title}</h2>
