@@ -46,7 +46,8 @@
 
   .newproducts{
     /* margin: 2% ; */
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 5px;

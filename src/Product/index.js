@@ -9,7 +9,7 @@ const Products = () =>{
     useEffect (() =>{
         const getproduct = async () => {
             try{
-                const response = await fetch ('https://dummyjson.com/products?limit=8');
+                const response = await fetch ('https://dummyjson.com/products?limit=16');
                 const data = await response.json();
                 setProducts(data.products);
             }
